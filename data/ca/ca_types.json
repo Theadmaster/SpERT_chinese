@@ -28,35 +28,43 @@
   "relations": {
     "身体部位_症状体征": {
       "short": "身体部位_症状体征",
-      "verbose": "身体部位_症状体征"
+      "verbose": "身体部位_症状体征",
+      "symmetric": false
     },
     "身体部位_检查检验": {
       "short": "身体部位_检查检验",
-      "verbose": "身体部位_检查检验"
+      "verbose": "身体部位_检查检验",
+      "symmetric": false
     },
     "身体部位_治疗方式": {
       "short": "身体部位_治疗方式",
-      "verbose": "身体部位_治疗方式"
+      "verbose": "身体部位_治疗方式",
+      "symmetric": false
     },
     "治疗方式_用药剂量": {
       "short": "治疗方式_用药剂量",
-      "verbose": "治疗方式_用药剂量"
+      "verbose": "治疗方式_用药剂量",
+      "symmetric": false
     },
     "治疗方式_医疗耗材": {
       "short": "治疗方式_医疗耗材",
-      "verbose": "治疗方式_医疗耗材"
+      "verbose": "治疗方式_医疗耗材",
+      "symmetric": false
     },
     "检查检验_症状体征": {
       "short": "检查检验_症状体征",
-      "verbose": "检查检验_症状体征"
+      "verbose": "检查检验_症状体征",
+      "symmetric": false
     },
     "检查检验_医疗耗材": {
       "short": "检查检验_医疗耗材",
-      "verbose": "检查检验_医疗耗材"
+      "verbose": "检查检验_医疗耗材",
+      "symmetric": false
     },
     "医疗耗材_身体部位": {
       "short": "医疗耗材_身体部位",
-      "verbose": "医疗耗材_身体部位"
+      "verbose": "医疗耗材_身体部位",
+      "symmetric": false
     }
   }
 }
