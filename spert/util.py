@@ -8,6 +8,7 @@ import numpy as np
 import torch
 
 from spert.entities import TokenSpan
+from safetensors import safe_open
 
 CSV_DELIMETER = ';'
 
@@ -214,7 +215,11 @@ def check_version(config, model_class, model_path):
     if os.path.exists(model_path):
         # model_path = model_path if model_path.endswith('.bin') else os.path.join(model_path, 'pytorch_model.bin')
         model_path = model_path if model_path.endswith('.bin') else os.path.join(model_path, 'model.safetensors')
-        state_dict = torch.load(model_path, map_location=torch.device('cpu'))
+        state_dict = {}
+        with safe_open("model.safetensors", framework="pt", device=0) as f:
+            for k in f.keys():
+                state_dict[k] = f.get_tensor(k)
+        # state_dict = torch.load(model_path, map_location=torch.device('cpu'))
         config_dict = config.to_dict()
 
         # version check
