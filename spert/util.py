@@ -212,7 +212,8 @@ def to_device(batch, device):
 
 def check_version(config, model_class, model_path):
     if os.path.exists(model_path):
-        model_path = model_path if model_path.endswith('.bin') else os.path.join(model_path, 'pytorch_model.bin')
+        # model_path = model_path if model_path.endswith('.bin') else os.path.join(model_path, 'pytorch_model.bin')
+        model_path = model_path if model_path.endswith('.bin') else os.path.join(model_path, 'model.safetensors')
         state_dict = torch.load(model_path, map_location=torch.device('cpu'))
         config_dict = config.to_dict()
 
